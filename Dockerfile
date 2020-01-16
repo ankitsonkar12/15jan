@@ -11,3 +11,5 @@ copy /target/ci-pipeline-pragra-0.0.1.jar /opt/tomcat/ci-pipeline-pragra-0.0.1.j
 CMD java -jar ci-pipeline-pragra-0.0.1.jar
 EXPOSE 8080
 CMD /opt/tomcat/bin/catalina.sh run
+
+

@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-RUN mkdir /opt/tomcat/webappa
+RUN mkdir /opt/tomcat/webapps
 WORKDIR /opt/tomcat/webapps
 RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get -y install openjdk-8-jdk wget

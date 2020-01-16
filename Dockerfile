@@ -8,6 +8,6 @@ RUN wget http://muug.ca/mirror/apache-dist/tomcat/tomcat-8/v8.5.50/bin/apache-to
 RUN tar xvfz apache-tomcat-8.5.50.tar.gz
 RUN mv apache-tomcat-8.5.50/* /opt/tomcat/
 copy /target/ci-pipeline-pragra-0.0.1.jar /opt/tomcat/ci-pipeline-pragra-0.0.1.jar
-CMD java - jar ci-pipeline-pragra-0.0.1.jar
+CMD java -jar ci-pipeline-pragra-0.0.1.jar
 EXPOSE 8080
 CMD /opt/tomcat/bin/catalina.sh run

@@ -1,16 +1,16 @@
 FROM ubuntu:latest
-RUN mkdir /opt/tomcat/
-WORKDIR /opt/tomcat/
+RUN mkdir /opt/tomcat/webappa
+WORKDIR /opt/tomcat/webapps
 RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get -y install openjdk-8-jdk wget
 
 RUN wget http://muug.ca/mirror/apache-dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
 RUN tar xvfz apache-tomcat-8.5.50.tar.gz
-RUN mv apache-tomcat-8.5.50/* /opt/tomcat/
-copy /target/ci-pipeline-pragra-0.0.1.jar /opt/tomcat/
-
-CMD /opt/tomcat/bin/catalina.sh run
-CMD java -jar /opt/tomcat/ci-pipeline-pragra-0.0.1.jar
+RUN mv apache-tomcat-8.5.50/* /opt/tomcat/webapps
+copy /target/ci-pipeline-pragra-0.0.1.jar /opt/tomcat/webapps
+CMD java -jar /opt/tomcat/webapps/ci-pipeline-pragra-0.0.1.war
 EXPOSE 8080
+CMD /opt/tomcat/bin/catalina.sh run
+
 
 

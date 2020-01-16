@@ -11,6 +11,7 @@
     <groupId>co.pragra.jenkinslearning</groupId>
     <artifactId>ci-pipeline-pragra</artifactId>
     <version>0.0.1</version>
+         <packaging>war</packaging>
     <name>ci-pipeline-pragra</name>
     <description>CI/CD pipeline demo</description>
 

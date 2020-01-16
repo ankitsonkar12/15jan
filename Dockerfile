@@ -5,5 +5,6 @@ RUN mkdir /usr/local/tomcat
 RUN wget http://muug.ca/mirror/apache-dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-8.5.50/* /usr/local/tomcat/
+copy /target/ci-pipeline-pragra-0.0.1.jar /usr/local/tomcat/ci-pipeline-pragra-0.0.1.jar
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run

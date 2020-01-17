@@ -12,7 +12,7 @@ copy /target/ci-pipeline-pragra-0.0.1.war /usr/local/tomcat/webapps
 
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
-ENTRYPOINT ["java","-jar","/usr/local/tomcat/ci-pipeline-pragra-0.0.1.war"]
+
 
 
 

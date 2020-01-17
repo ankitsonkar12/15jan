@@ -9,7 +9,8 @@ RUN mv apache-tomcat-8.5.50/* /usr/local/tomcat
  
 WORKDIR /usr/local/tomcat/webapps
 copy /target/ci-pipeline-pragra-0.0.1.war /usr/local/tomcat/webapps
-ENTRYPOINT ["java","-jar","/usr/local/tomcat/ci-pipeline-pragra-0.0.1.war"]
+CMD java -jar /usr/local/tomcat/webapps/ci-pipeline-pragra-0.0.1.war
+
 
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
